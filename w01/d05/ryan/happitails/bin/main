@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+require 'pry'
+
+require_relative "../lib/application"
+
+KennelApp::Application.new.start
+
+
+binding.pry
