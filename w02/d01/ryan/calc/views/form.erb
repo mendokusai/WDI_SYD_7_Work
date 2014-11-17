@@ -1,0 +1,28 @@
+<form action="/calc" method="POST">
+	<span>
+		<ul>
+		<p>
+			<label for="number_one">First Number: </label>
+			<input type="text" name="number_one" id="number_one">
+		</p>
+		<label for="operator"> Operator: </label>
+		<select name="operator">
+			<option value="+">+</option>
+			<option value="-">–</option>
+			<option value="*">*</option>
+			<option value="/">/</option>
+		</select>
+		<p>
+			<label for="number_two">Second Number: </label>
+			<input type="text" name="number_two" id="number_two">
+		</p>
+		<p>
+		<input type="submit">
+		</p>
+		<h1>Results</h1>
+		<p>
+			<%= @number_one %> <%= @operator %> <%= @number_two %> = <%= @answer %>
+		</p>
+		</ul>
+	</span>
+	</form>
