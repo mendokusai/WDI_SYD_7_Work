@@ -1,0 +1,65 @@
+@import url(http://fonts.googleapis.com/css?family=Lato);
+body {
+	font-family: 'Lato', sans-serif;
+	background-color: black;
+	color: white;
+	margin-left: 200px;
+	margin-right: 200px;
+}
+
+#banner {
+	height: 140px;
+	background-color: #D3124C;
+}
+
+#banner p {
+	padding-left: 50px;
+}
+
+h1 {
+	padding: 20px 20px 10px 20px;
+	color: white;
+}
+#names {
+	height: 100px;
+	width: 100%;
+	background-color: green;
+}
+
+span li{
+	padding-left: 40px;
+	color: gold;
+	display: inline-block;
+	font-size: 30px;
+}
+
+h3 {
+	padding: 3px 20px 0px 20px;
+	color: #D3124C;
+	font-size: 30px;
+}
+h4 {
+	color: white;
+	font-size: 30px;
+}
+
+p {
+	font-size: 24px;
+	color: white;
+}
+
+img {
+	margin: 50px 50px 5px 50px;
+	border: red dotted 5px;
+}
+footer {
+	margin-top: 50px;
+	padding: 10px;
+	background-color: #D3124C;
+	color: white;
+	
+}
+
+footer p {
+	padding-bottom: 20px;
+}
