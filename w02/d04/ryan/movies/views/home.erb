@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Movie Search</title>
+	<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:400,300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="../movistyle.css">
+</head>
+<body>
+	<header>
+		<a href="/"><h1>Movie Search</h1></a>
+		<div id="search_bar">
+			<form action='/'>
+			<input type="text" name="movie_title" placeholder="Frozen">
+			<input type="submit" name="button" value="Search">
+			<input type="submit" name="button" value="I'm feeling lucky!">
+			</form>
+			<hr>
+		</div>
+	</header>
+
+<div id="search_display">
+<span><ul>
+		<% if @movies %>
+
+			<% @movies.each do |movie| %>
+
+				<li><a href="/movies/<%= movie["imdbID"] %>"><%= movie["Title"]%> (<%= movie["Year"]%>)</a></li>
+
+
+
+			<% end %>
+
+		<% end %>
+		</ul></span>
+</div>
+<div class="clearfix"></div>
+<div id="movie_display">
+
+
+<div id="content">
+		
+
+	<div id="poster">
+		<% if @movie %>
+		<a href="https://www.google.com/search?q=<%=@movie["Title"]%>"><img src=" <%=@movie['Poster']%>"></a>
+	</div>
+
+	<div id="deets">
+		
+
+		<h1><%= @movie["Title"] %></h1>
+
+		<ul>
+			<li>Year: <%= @movie["Year"] %> </li>
+			<li>Rating: <%= @movie["Rated"] %> </li>
+			<li>Released: <%= @movie["Released"] %> </li>
+			<li>Runtime: <%= @movie["Runtime"] %> </li>
+			<li>Genre: <%= @movie["Genre"] %> </li>
+			<li>Director: <%= @movie["Director"] %> </li>
+			<li>Writer(s): <%= @movie["Writer"] %> </li>
+			<li>Actors: <%= @movie["Actors"] %> </li>
+			<li>Language: <%= @movie["Language"] %> </li>
+			<li>Country: <%= @movie["Country"] %> </li>		
+			</ul>
+	</div>
+	<div class="clearfix"></div>
+	<div id="bottom"
+		<h1>Ratings</h1>
+			<ul>
+				<li>IMDb Rating: (<%=@movie["imdbRating"] %>) <%= @stars = get_pics(@movie["imdbRating"], "star") %></li>
+				<li>Rotten Tomatoes: (<%=@movie["tomatoRating"]%>) <%= @tomatoes = get_pics(@movie["tomatoRating"], "tomato")%> </li>
+			</ul>
+		<h2>Plot</h2>
+			<p><%= @movie["Plot"] %></p>
+			<p>Awards: <%= @movie["Awards"] %></p>
+		<% end %>
+	</div>
+
+</div>
+<div id="related">
+
+<span><ul>
+		
+
+
+		</ul></span>
+
+</div>
+
+
+</div>
+<footer>
+<center><h2>Movies are great when you have time to watch them!</h2></center>
+</footer>
+
+
+
+
+
+
+	
+</body>
+</html>

@@ -1,0 +1,29 @@
+<div id="content">
+		<% if @movie %>
+
+	<div id="poster">
+		<a href="https://www.google.com/search?q=<%=@movie["Title"]%>">
+		</div>
+		<div id="deets">
+		<img src=" <%=@movie['Poster']%>">
+
+		<h2><%= @movie["Title"] %></h2></a>
+
+		<ul>
+			<li>Year: <%= @movie["Year"] %> </li>
+			<li>Rating: <%= @movie["Rated"] %> </li>
+			<li>Repeased: <%= @movie["Released"] %> </li>
+			<li>Runtime: <%= @movie["Runtime"] %> </li>
+			<li>Genre: <%= @movie["Genre"] %> </li>
+			<li>Director: <%= @movie["Director"] %> </li>
+			<li>Writer(s): <%= @movie["Writer"] %> </li>
+			<li>Actors: <%= @movie["Actors"] %> </li>
+			<li>Language: <%= @movie["Language"] %> </li>
+			<li>Country: <%= @movie["Country"] %> </li>
+		</ul>
+
+		<h2>Plot</h2>
+		<p><%= @movie["Plot"] %></p>
+		<p>Awards: <%= @movie["Awards"] %></p>
+		<% end %>
+		</div>
