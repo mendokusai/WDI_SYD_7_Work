@@ -1,0 +1,11 @@
+KM: 10000
+Door Type: Frank
+Sunroof? Bop
+Flamethrower? yes!
+Engine Type: Twee
+Price: 20KM: 0
+Door Type: 
+Sunroof? 
+Flamethrower? 
+Engine Type: 
+Price: 0
