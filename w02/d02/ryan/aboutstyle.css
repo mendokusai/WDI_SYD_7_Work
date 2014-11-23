@@ -1,0 +1,50 @@
+
+		body {
+			background-color: navy;
+			font-family: 'Rock Salt', cursive;
+			color: gold;
+			padding-left: 160px;
+			padding-right: 160px;
+		}
+		h1 {
+			font-size: 50px;
+		}
+		img {
+			border: gold solid 20px;
+		}
+		#main {
+			background-color: navy;
+		}
+		#left {
+			float: left;
+			margin-right: 100px;
+			background-color: navy;
+		}
+
+		#center-right {
+			float: left;
+			background-color: navy;
+		}
+
+		footer {
+			background-color: navy;
+			color: gold;
+			margin-left: 100px;
+			padding-left: 100px;
+		}
+		header {
+			padding-top: 30px;
+			padding-left: 30px;
+			background-color: gold;
+			color: navy;
+		}
+		li { 
+			display: inline-block;
+			padding-right: 70px;
+		}
+
+		strong{
+			color: red;
+			font-size: 20px;
+		}
+		

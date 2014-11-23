@@ -1,0 +1,24 @@
+#my_square {
+	background: red;
+	width: 7.1em; /*okay*/
+	height: 7.1em; /*less good*/
+}
+
+#sub_square {
+	background: blue;
+	width: 30%;
+	height: 2em;
+	/*height: ;*/
+}
+
+h1 {
+	font-size: 3em;
+	line-height: 2em;
+}
+h2 {
+	font-size: 1em;
+}
+
+#big_section {
+	font-size: 2.57em;
+}

@@ -67,4 +67,73 @@ end
 
 file exists? t/f
 
-exists?(file_name)
+exist(s)?(file_name)
+
+gsub is a good method to clean up data to remove destructive elements.
+
+
+File.unlink > deletes file
+
+JSON.generate(collection)
+
+can copy json details to file
+
+make JSON string
+send json string to file
+
+then get json string and pull out details
+
+Things we've covered:
+
+variables
+methods
+classes
+hashes
+arrays
+hashes v arrays
+sinatra
+html
+css
+
+css box model
+html forms
+the web
+	request/response
+	headers
+	methods
+	status codes
+reference material
+pry
+debugging w/pry
+reading error messages
+
+
+the_db.txt => JSON PARSE ERROR
+
+
+git tak with lucy bain . com
+
+if you want to work on things (exp things) do it on the side via a branch
+
+when ready to complete, merge branch into master
+
+do it early
+
+
+noun project
+
+tools: git apps
+
+
+clone is the original fetch
+fetch grabs changes since you last did it.
+
+tinyurl.com/ruby-rules
+
+
+homework
+files + sinatra + forms
+
+page loads from files
+file info displays
+form

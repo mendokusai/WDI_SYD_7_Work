@@ -30,10 +30,11 @@ unless File.exists? 'madlib.txt'
 	print "Choose a body_part: "
 	body_part = gets.strip
 	gets
-	
+
 	story = "One day #{friends_name} was #{moving} down the street. #{friends_name} walked into a #{group_of_horses} gangmembers. They #{past_tense_action} before #{friends_name} before #{action_infinitive} your friend in the #{body_part}."
 
 	print story
+	gets
 
 	File.open('madlib.txt', 'a+') do |add_file|
 		add_file.write(friends_name + "\n")

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Checklist</title>
+	<link rel="stylesheet" type="text/css" href="normalize.css">
+</head>
+<body>
+	
+	<header>
+		<h1>To Do Checklist</h1>
+		<hr>
+	</header>
+	
+	<main>
+		<form action= '/event'>
+			<label for="event">Event:</label>
+			<input type="text" id="event" name="event" placeholder="meetup">
+			<label for="time">Time:</label>
+			<input type="text" id="time" name="time" placeholder="6:00">
+			<!-- <label for="am_pm">AM/PM</label> -->
+			<select id="am_pm" name="am_pm">
+				<option value="am">AM</option>
+				<option value="pm">PM</option>
+			</select>
+			<label for="notes">Event:</label>
+			<input type="text" id="notes" name="notes" placeholder="Notes">
+			<!-- <label for="date">Date:</label>
+			<input type="text" id="date" name="date" placeholder="25/12/2014"> -->
+			<input type="submit" name="button" value="Add Item">
+		</form>
+		<hr>
+
+		<div id="messages">
+		<ul>
+			<% if @events %>
+			<h2> Events: </h2>
+			<% @events.each do |datum| %>
+			<%=datum%>
+			<% end %>
+			<button>Completed!</button>
+			<% end %>
+			</ul>
+		</div>
+		
+	</main>
+	
+	<footer>
+		
+	</footer>
+</body>
+</html>

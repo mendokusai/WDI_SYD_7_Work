@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+require_relative "../lib/blog/app"
+require_relative "../lib/database/table"
+
+#chmod +x bin/main - run this from one file higher
+
+Blog::App.new.start
+Database::Table
+
+# structure
+# 
+# blog - folder for encapsulation
+# 	bin - executable files
+# 		main - executable file
+# 	lib - support documents
+# 		blog - modules for blog
+# 			app.rb - module file for blog (has start)
+# 			

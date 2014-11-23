@@ -1,0 +1,75 @@
+<form action="/buy" method="POST">
+<!-- get puts the details at the top of the screen-->
+<!-- 	<input type="hidden" name="_method" value="PUT"> -->
+
+<!-- Check dash for HTML 5 input for all the different ones. -->
+	<input type="hidden" name="price" value="12.95">
+	<label for="quantity">Quantity:</label>
+	<input type="text" name="qty" id="quantity" value="3">
+	<label for="product">Product:</label>
+	<input type="text" name="product_name" id="product" value="Samsung TV">
+
+	<input type="color">
+	<label for="email">Email:</label>
+	<input type="text" name="email" id="email" placeholder="you@coolguy.com">
+	<input type="search" name="search_query" value="Search">
+	<label name="tele">Tel:</label>
+	<input type="tel" id="tele" placeholder="000-000-0000">
+	<input type="password" name="pass">
+	<input type="submit" value="Buy Now?">
+
+	<hr>
+
+<!-- checkboxes envoke a value array with individual values in there. without value they just come up as "on" and it's not clear which selection is made -->
+
+	<label>Car Features:</label><br>
+	<input id="seats" type="checkbox" name="car_features[]"value = "heated_seats">
+	<label for="seats">Heated Seats</label>	<br>	
+	<input id="wheels" type="checkbox" name="car_features[]" value="wheels">
+	<label for="wheels">Wheels</label>	<br>
+	<input id="flame"type="checkbox" name="car_features[]" vale="flame">
+	<label for="flame">Flame Throwers</label><br>
+	<input id="oil" type="checkbox" name="car_features[]"value = "oil">
+	<label for="oil">Oil Slicks</label>
+
+	<hr>
+
+<label>Shirt Size</label><br>
+<input type="radio" id="extra_small" name="shirt_size" value="XS">
+<label for="extra_small">XS</label><br>
+<input type="radio" id="small" name="shirt_size" value="S">
+<label for="small">S</label><br>
+<input type="radio" id="med" name="shirt_size" value="M">
+<label for="med">M</label><br>
+<input type="radio" id="large" name="shirt_size" value="L">
+<label for="large">L</label><br>
+<input type="radio" id="xlarge" name="shirt_size" value="XL">
+<label for="xlarge">XL</label><br>
+
+<hr>
+<!-- dropdown -->
+
+<label for="countries">Country</label>
+<select id="countries">
+	<optgroup label="Oceania">
+	<option value="Australia">Australia</option>
+	</optgroup>
+	<optgroup label="Warzone">
+	<option value="Syria">Syria</option>
+	</optgroup>
+	<optgroup label="Bogan">
+	<option value="Straya">Straya</option>
+	</optgroup>
+	<optgroup label ="'Murica">
+	<option value="United States">United States</option>
+	</optgroup>
+	<optgroup label="England">
+	<option value="United Kingdom">England</option>
+	</optgroup>
+<!-- checkout jquery token input-->
+</select>
+
+
+
+
+</form>

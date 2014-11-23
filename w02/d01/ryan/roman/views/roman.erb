@@ -1,0 +1,13 @@
+
+<h1>Roman Numerals</h1>
+
+<h2>The roman numeral for <%= @number %> is:</h2>
+<p>
+<%= @answer %>
+</p>
+
+<% if @number > 3000 %> the lack of equal says run this code
+	<p>This number is too big</p>
+<% else %>
+	<%= @number %> <!--the equal sign says print this -->
+<% end %>

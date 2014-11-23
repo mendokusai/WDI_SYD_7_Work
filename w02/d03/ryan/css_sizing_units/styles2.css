@@ -1,0 +1,73 @@
+* {
+/*	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;*/
+	box-sizing: border-box;
+}
+
+#full_page {
+	width: 100%;
+	padding: 50px;
+	border: 10px dashed black;
+	margin: 50px;
+}
+body {
+	line-height: 1;
+}
+
+.clearfix {
+	clear: both;
+}
+#container {
+	width: 100%;
+	/*margin: 50px	 auto;*/
+	line-height: 1.5em;
+}
+
+header, nav, main, #sidebar, #left, #right {
+	padding: 20px;
+}
+
+header {
+	background: #FF0000;
+	height: 300px;
+	background-image: url(http://www.fillmurray.com/1000/300);
+}
+
+nav {
+	background: #00FF00;
+	background-image: url(http://www.fillmurray.com/g/1000/100);
+}
+
+main {
+	background: #0000FF;
+	width: 70%;
+	float: left;
+	height: 800px;
+	background-image: url(http://www.fillmurray.com/700/800);
+}
+
+#sidebar {
+	background: #FFFF00;
+	width: 30%;
+	float: left;
+	height: 800px;
+	background-image: url(http://www.fillmurray.com/300/800);
+}
+
+#left {
+	background: #F0F0F0;
+	width: 50%;
+	float: left;
+	height: 300px;
+	background-image: url(http://www.fillmurray.com/500/300);
+}
+
+#right {
+	background: #4F4F4F;
+	width: 50%;
+	float: left;
+	height: 300px;
+	background-image: url(http://www.fillmurray.com/500/300);
+}

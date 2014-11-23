@@ -4,11 +4,12 @@ require "json"
 unless File.exists? 'the_db.txt'
 	File.open('the_db.txt', 'a+').close
 else
+	#step 5 print the db
 	the_file = File.open('the_db.txt', 'r').read
-	puts JSON(the_file) rescue []
+	puts JSON(the_file) rescue [] #added to avoid error...
 end
 
-#step 5 print the db
+
 
 
 #step 2 get names
