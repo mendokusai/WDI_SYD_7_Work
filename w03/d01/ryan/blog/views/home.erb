@@ -1,0 +1,17 @@
+<ul>
+<% @blog_posts.each do |post| %>
+	<li>
+	<h5>Number: <%= "#{post['id']}" %></h5>
+  <h1><a href='/posts/<%= "#{post['id']}" %>'><%= "#{post['title']}" %></a></h1>
+  <br>
+  <p><%="#{post['content']}"%></p>
+  <br>
+  <h6>Number: 0<%= "#{post['id']}" %>, Posted by: <a href='http://<%= "#{post["author_website"]}"%> '><%="#{post['author']}"%></a> </h6>
+  <hr><br>
+  </li>
+	
+<% end %>
+</ul>
+
+ <a href="/posts/new"><button>New Posts</button></a>
+

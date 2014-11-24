@@ -1,0 +1,9 @@
+<h2><%= "#{@single_post['title']}"%></h2>
+
+  <p><strong>Post No:</strong> <%= "#{@single_post['id']}"%>
+  <br>
+  <p><%= "#{@single_post['content']}" %></p>
+
+  <h6><a href='http://<%="#{@single_post["author_website"]}" %>'><%="#{@single_post['author']}"%></a></h6>
+
+  <a href="/"><button>Home</button></a> <a href="/"><button name="deleter" value="delete">Delete Post</button></a> </button><a href="/posts/new"><button>New Post</button></a>
