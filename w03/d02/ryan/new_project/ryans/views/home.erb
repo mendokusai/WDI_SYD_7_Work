@@ -1,0 +1,22 @@
+<p>
+  <a href="/posts/new">Add Post</a>
+</p>
+
+<ul>
+<% @posts.each do |post| %>
+  <li style="line-height: 3em;">
+    <h1><%= post["title"] %></h1>
+    <% if post["author_first_name"] %>
+    <h4><em>Author: <%= post["author_first_name"] + " " + post["author_last_name"] %></em>
+    <% end %>
+    <% if post["date"] %>
+    posted on: <%= post["date"] %></h4>
+    <% end %>
+    <span style="padding: 10px;"><a href="/posts/<%= post["id"] %>/edit">View/Edit Post</a>
+    <form action="/posts/<%= post["id"] %>" method="POST" style="display: inline;">
+      <input type="hidden" name="_method" value="DELETE">
+      <input type="submit" value="Destroy">
+    </form></span>
+  </li>
+<% end %>
+</ul>
