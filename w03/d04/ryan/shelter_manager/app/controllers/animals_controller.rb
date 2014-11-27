@@ -16,8 +16,11 @@ class AnimalsController < ApplicationController
   	# render plain: params[:animal].inspect
   	@animal = Animal.new(animal_params)
 
-  	@animal.save
-  	redirect_to @animal
+  	if @animal.save
+  		redirect_to @animal
+  	else
+  		render 'new'
+  	end
   end
 
   private

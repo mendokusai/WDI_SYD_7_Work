@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>ShelterManager</title>
+  <h1>Shelter Manager</h1>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -9,6 +10,8 @@
 <body>
 
 <%= yield %>
+
+<%= link_to 'Add an Animal', new_animal_path %>
 
 </body>
 </html>
