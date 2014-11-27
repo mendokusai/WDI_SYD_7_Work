@@ -28,9 +28,10 @@ class AnimalsController < ApplicationController
   end
 
   def update
-  	@animal = Animal.find(params[:id])
+  	animal = Animal.find(params[:id])
 
-  	if @animal.update(animal_params)
+  	if animal.update(animal_params)
+
   		redirect_to @animal
   	else
   		render 'edit'
