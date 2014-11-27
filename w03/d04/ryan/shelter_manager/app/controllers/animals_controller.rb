@@ -36,7 +36,14 @@ class AnimalsController < ApplicationController
   		render 'edit'
   	end
   end
-  
+
+  def destroy
+  	@animal = Animal.find(params[:id])
+  	@animal.destroy
+
+  	redirect_to animals_path
+  end
+
   private
   	def animal_params
   		params.require(:animal).permit(:name, :breed, :arrival_time, :departure_time, :age, :species, :sex)

@@ -1,28 +1,19 @@
 <table>
 <tr>
-<th>Name</th>
-<th>Species</th>
-<th>Breed</th>
-<th>Age</th>
-<th>Sex</th>
-<th>Arrival Time</th>
-<th>Departure Time</th>
-<th colspan='7'></th>
+<th>Animal Name</th>
+<th>  Species  </th>
+<th>More Information</th>
+<th colspan='5'></th>
 </tr>
+
 <!-- This whole table is wonky. -->
 <% @animals.each do |animal | %>
 <tr>
 	<td><%= animal.name %></td>
 	<td><%= animal.species %></td>
-	<td><%= animal.breed %></td>
-	<td><%= animal.age %></td>
-	<td><%= animal.sex %></td>
-	<td><%= animal.arrival_time %></td>
-	<td><%= animal.departure_time %></td>
 	<td><%= link_to animal.name, animal %></td>
-
-	<td><%= link_to 'Show Animals', animals_path %></td>
-	<td><%= link_to 'Edit Animals Details', edit_animal_path(animal) %></td>
+	<td><%= link_to 'Edit Details', edit_animal_path(animal) %></td>
+	<td><%= link_to 'Remove Data', animal_path(animal), method: :delete, data: { confirm: 'Are you sure?'} %></td>
 	</tr>
 
 <% end %>
