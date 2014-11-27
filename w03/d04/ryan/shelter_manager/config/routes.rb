@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   # get 'animals/index'
-  resources :animals, only: [:index, :show]
+  resources :animals
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

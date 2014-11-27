@@ -7,4 +7,21 @@ class AnimalsController < ApplicationController
   def show
   	@animal = Animal.find(params[:id])
   end
+
+  def new
+  	@animal = Animal.new
+  end
+
+  def create
+  	# render plain: params[:animal].inspect
+  	@animal = Animal.new(animal_params)
+
+  	@animal.save
+  	redirect_to @animal
+  end
+
+  private
+  	def animal_params
+  		params.require(:animal).permit(:name, :breed, :arrival_time, :departure_time, :age, :species, :sex)
+  	end
 end
