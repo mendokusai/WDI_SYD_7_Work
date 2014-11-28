@@ -5,3 +5,12 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Artist.create({
+	first_name: "Davida",
+	last_name: "Allen",
+	period: "PO-POMO",
+	nationality: "Australian",
+	date_of_birth: "20/10/1953",
+	image: "http://c300221.r21.cf1.rackcdn.com/davida-allen-1951-australia-the-rude-painting-or-michael-and-me-oil-on-canvas-1645-x-2505-cm-1383896094_org.jpg"
+	})
