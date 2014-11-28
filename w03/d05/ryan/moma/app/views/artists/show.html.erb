@@ -1,7 +1,7 @@
 <h2><%= @artist.first_name + " " + @artist.last_name %></h2> <%= link_to 'Edit', edit_artist_path(@artist) %> | 
 <%= link_to "Delete", artist_path(@artist),
 	method: :delete, data: { confirm: 'Are you sure?' } %>
-	
+
 <ul>
 <li>Period: <%= @artist.period %></li>
 <li>Nationality: <%= @artist.nationality %></li>
@@ -9,5 +9,15 @@
 
 </ul>
 <h2>Works of <%= @artist.first_name + " " + @artist.last_name %>:</h2>
+
+<% @artist.paintings.each do |painting| %>
+
+<%= render @artist.paintings %>
+
+<% end %>
+
+<h4>Add to the database!</h4>
+
+<%= render "paintings/form" %>
 
 <%= link_to "Back", artists_path %>

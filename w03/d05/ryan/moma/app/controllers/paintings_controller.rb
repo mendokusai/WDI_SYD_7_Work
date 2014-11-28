@@ -1,0 +1,12 @@
+class PaintingsController < ApplicationController
+	def create
+		@artist = Artist.find(params[:artist_id])
+		@painting = @artist.paintings.create(painting_params)
+		redirect_to artist_path(@artist)
+	end
+
+	private
+		def painting_params
+			params.require(:painting).permit(:title, :year, :medium, :style, :image)
+		end
+end
