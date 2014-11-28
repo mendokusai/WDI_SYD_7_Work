@@ -1,8 +1,12 @@
-<h2><%= @artist.first_name + " " + @artist.last_name %></h2>
+<h2><%= @artist.first_name + " " + @artist.last_name %></h2> <%= link_to 'Edit', edit_artist_path(@artist) %> | 
+<%= link_to "Delete", artist_path(@artist),
+	method: :delete, data: { confirm: 'Are you sure?' } %>
+	
 <ul>
 <li>Period: <%= @artist.period %></li>
 <li>Nationality: <%= @artist.nationality %></li>
 <li>Date of Birth: <%= @artist.date_of_birth %></li>
+
 </ul>
 <h2>Works of <%= @artist.first_name + " " + @artist.last_name %>:</h2>
 

@@ -1,11 +1,13 @@
-<h1>Sandwich Artists</h1>
+<h1>Pickles</h1>
 
 <ul>
 <% @artists.each do |artist| %>
 
 	<li><%= artist.first_name %> <%= artist.last_name %></li>
-	<li><%= link_to "Show", artist_path(artist) %></li>
-	<li><%= link_to "Edit", edit_artist_path(artist) %></li>
+	<%= link_to "Show", artist_path(artist) %> | 
+	<%= link_to "Edit", edit_artist_path(artist) %> |
+	<%= link_to "Delete", artist_path(artist),
+									method: :delete, data: { confirm: 'Are you sure?' } %>
 
 	<% end %>
 </ul>
