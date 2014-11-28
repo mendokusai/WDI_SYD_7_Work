@@ -1,0 +1,9 @@
+<ul>
+	<% @posts.each do |post| %>
+		<li>
+			<a href='/posts/<%=post["id"] %>'><h1><%= "#{post["title"]}" %></h1></a>
+			<h4>Posted by <%= "#{post["author_first"]}"%> <%= "#{post["author_last"]}"%> on <%= "#{post["date"]}"%>
+			</h4>
+		</li>
+	<% end %>
+</ul>

@@ -1,0 +1,17 @@
+<ul>
+		<% @posts.each do |post| %>
+			<li>
+				<h1><%= "#{post["title"]}" %></h1>
+				<p><%= "#{post["post"]}"%></p>
+				<h4>Posted by <%= "#{post["author_first"]}"%> <%= "#{post["author_last"]}"%> on <%= "#{post["date"]}"%>
+				</h4>
+				<p>
+					<a href="http://<%= "#{post["website"]}"%>" title="Website"><img src="/images/www.png"></a>
+					<a href="http://<%= "#{post["twitter"]}"%>" title="Twitter"><img src="/images/twitter.png"></a>
+					
+				</p>
+
+
+			</li>
+		<% end %>
+		</ul>
