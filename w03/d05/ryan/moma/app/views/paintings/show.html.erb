@@ -1,0 +1,7 @@
+<img src=<%="#{@painting.image}" %> width="500em">
+<h4><%= @painting.medium %>, <%= @painting.year %></h4>
+
+<h1><%= @painting.title %></h1>
+
+<%= link_to "Back", artist_path(@artist) %> | 
+<%= link_to "Return to Artists", artists_path %>

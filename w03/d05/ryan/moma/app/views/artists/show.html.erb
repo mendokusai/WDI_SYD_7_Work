@@ -22,8 +22,10 @@
 <h2>Works of <%= @artist.first_name + " " + @artist.last_name %>:</h2>
 
 <% @artist.paintings.each do |painting| %>
+
 <div class="entry">
-<%= render painting %>
+	<%= render painting %>
+	
 </div>
 <% end %>
 

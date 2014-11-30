@@ -12,6 +12,11 @@ class PaintingsController < ApplicationController
 		redirect_to artist_path(@artist)
 	end
 
+	def show
+		@artist = Artist.find(params[:artist_id])
+		@painting = @artist.paintings.find(params[:id])
+	end
+	
 	private
 		def painting_params
 			params.require(:painting).permit(:title, :year, :medium, :style, :image)
