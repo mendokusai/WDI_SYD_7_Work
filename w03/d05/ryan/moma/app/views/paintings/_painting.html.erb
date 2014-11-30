@@ -1,6 +1,6 @@
 <p>
-<strong>image(text):</strong>
-<%= painting.image %>
+
+<img src=<%="#{painting.image}" %> width="150em">
 <br><br>
 <strong>Title:</strong>
 <%= painting.title %><br>
@@ -10,4 +10,7 @@
 <%= painting.style %><br>
 <strong>Medium:</strong>
 <%= painting.medium %>
+</p>
+<p>
+<%= link_to 'Remove Painting', [painting.artist, painting], method: :delete, data: {confirm: 'Are you sure?'} %>
 </p>

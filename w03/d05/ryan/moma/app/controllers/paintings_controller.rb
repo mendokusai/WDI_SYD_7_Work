@@ -5,6 +5,13 @@ class PaintingsController < ApplicationController
 		redirect_to artist_path(@artist)
 	end
 
+	def destroy
+		@artist = Artist.find(params[:artist_id])
+		@painting = @artist.paintings.find(params[:id])
+		@painting.destroy
+		redirect_to artist_path(@artist)
+	end
+
 	private
 		def painting_params
 			params.require(:painting).permit(:title, :year, :medium, :style, :image)
