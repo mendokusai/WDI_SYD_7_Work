@@ -1,25 +1,39 @@
 <h2><%= @artist.first_name + " " + @artist.last_name %></h2> 
-<%= link_to "Back", artists_path %> | 
-<%= link_to 'Edit', edit_artist_path(@artist) %> | 
-<%= link_to "Delete", artist_path(@artist),
-	method: :delete, data: { confirm: 'Are you sure?' } %>
 
+<div class="deets">
 <ul>
 <li>Period: <%= @artist.period %></li>
 <li>Nationality: <%= @artist.nationality %></li>
 <li>Date of Birth: <%= @artist.date_of_birth %></li>
-<hr>
 </ul>
+</div>
+<div class="artist_pic">
+	<img src=<%="#{@artist.image}"%> height="200px">
+</div>
+
+<div class="clearfix"></div>
+<center>
+<%= link_to "Back", artists_path %> | 
+<%= link_to 'Edit', edit_artist_path(@artist) %> | 
+<%= link_to "Delete", artist_path(@artist),
+	method: :delete, data: { confirm: 'Are you sure?' } %>
+</center>	
+<hr>
 <h2>Works of <%= @artist.first_name + " " + @artist.last_name %>:</h2>
 
 <% @artist.paintings.each do |painting| %>
-
-<%= render @artist.paintings %>
-
+<div class="entry">
+<%= render painting %>
+</div>
 <% end %>
 
-<h4>Add to the database!</h4>
 
-<%= render "paintings/form" %>
+<div class="clearfix"></div>
 
+<hr>
+<div class="form">
+	<h4>Add to the database!</h4>
+
+	<%= render "paintings/form" %>
+</div>
 <%= link_to "Back", artists_path %>
