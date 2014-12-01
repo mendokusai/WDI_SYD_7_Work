@@ -1,7 +1,9 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This Cookbook App Displays Cookboks or "Books" that display recipies and ingredients. Recipies show meal details and ingredients. 
+
+We also made use of the Annotate gem this time. It's pretty great.
+
 
 Things you may want to cover:
 

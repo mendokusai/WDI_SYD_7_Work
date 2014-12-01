@@ -2,7 +2,13 @@
 
 <h2><%= @book.title %></h2>
 <p>by <%= @book.chef %></p>
-
+<ul>
+<div id="add_recipe">
+	<% @recipe.each do |x| %>
+		<li><%= x.name %></li>
+	<% end %>
+</div>
+</ul>
 <%= link_to 'Edit', edit_book_path(@book) %>
 <%= link_to "Delete", book_path(@book),
 	method: :delete, data: { confirm: 'Are you sure?' } %>

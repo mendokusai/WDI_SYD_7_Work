@@ -15,6 +15,8 @@
 
 class Recipe < ActiveRecord::Base
 	belongs_to :book
-	has_many :recipie_ingredients
-	has_many :ingredients, through: :recipie_ingredients
+	has_many :recipe_ingredients
+	has_many :ingredients, through: :recipe_ingredients
+
+	resources :ingredients
 end
