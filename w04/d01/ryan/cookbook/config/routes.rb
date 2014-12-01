@@ -1,6 +1,8 @@
 # == Route Map
 #
 #          Prefix Verb   URI Pattern                     Controller#Action
+#   recipes_index GET    /recipes/index(.:format)        recipes#index
+#     books_index GET    /books/index(.:format)          books#index
 #            root GET    /                               pages#index
 #           books GET    /books(.:format)                books#index
 #                 POST   /books(.:format)                books#create
@@ -29,6 +31,8 @@
 #
 
 Rails.application.routes.draw do
+
+  get 'recipes/index'
 
   get 'books/index'
 

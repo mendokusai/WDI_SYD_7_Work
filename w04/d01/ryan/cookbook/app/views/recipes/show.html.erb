@@ -1,0 +1,12 @@
+<%= image_tag @recipe.image %>
+
+<h2><%= @recipe.name %></h2>
+
+<ul>
+<li>Course: <%= @recipe.course %></li>
+<li>Servings: <%= @recipe.serving_size %></li>
+</ul>
+<h3>Directions</h3>
+<p><%= @recipe.instructions %></p>
+
+<%= link_to 'Back', recipes_path %>
