@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: books
+# Table name: b@ooks
 #
 #  id         :integer          not null, primary key
 #  title      :string(255)
