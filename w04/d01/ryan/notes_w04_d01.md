@@ -165,3 +165,7 @@ startup
 		rake routes
 
 
+hacksumit day 1:
+	infoq
+	yammer
+	
